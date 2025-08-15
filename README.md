@@ -1,17 +1,28 @@
-# todo_list_app
+# Todo_list_app
+## Introduction
+Ini merupakan salah satu proyek yang dikembangkan untuk keperluan seleksi. Aplikasi ini dibangun menggunakan bahasa pemrograman Dart. Selama pengembangan, telah diimplementasikan beberapa komponen penting yang mendukung fungsionalitas aplikasi.
+1. State Management: setState(), Provider, atau Riverpod
+2. Widget Utama: Scaffold, ListView.builder, TextField, Checkbox, ElevatedButton
 
-A new Flutter project.
+Aplikasi ini memiliki beberapa fitur yang dirancang untuk memudahkan pengguna. Fitur-fitur tersebut mencakup berbagai fungsi utama yang dapat digunakan secara intuitif.
+1. Fetch data API dari JSONPlaceholder
+2. Menghapus Data Kegiatan
+3. Menambah Data Kegiatan
+4. Mengupdate Status Kegiatan
+5. Terdapat fitur pencarian untuk mempermudah pencarian.
 
 ## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# todo-list-app
+Untuk memulai atau menjalankan kode, ada beberapa langkah yang perlu dilakukan terlebih dahulu. Langkah-langkah ini memastikan aplikasi dapat berjalan dengan baik dan sesuai harapan.
+1. Lakukan Cloning Project.
+   git clone <URL_PROJECT>
+   cd <NAMA_FOLDER_PROJECT>
+   
+2. Lakukan penginstallan Dependencies
+   flutter pub get
+   
+3. Jalankan Project.
+   flutter run
+   
+4. Jika ada Error lakukan, Troubleshooting.
+   flutter clean
+   flutter pub get
