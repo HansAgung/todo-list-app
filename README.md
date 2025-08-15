@@ -14,7 +14,7 @@ Aplikasi ini memiliki beberapa fitur yang dirancang untuk memudahkan pengguna. F
 ## Getting Started
 Untuk memulai atau menjalankan kode, ada beberapa langkah yang perlu dilakukan terlebih dahulu. Langkah-langkah ini memastikan aplikasi dapat berjalan dengan baik dan sesuai harapan.
 1. Lakukan Cloning Project.
-   git clone <URL_PROJECT>
+   git clone https://github.com/HansAgung/todo-list-app.git
    cd <NAMA_FOLDER_PROJECT>
    
 2. Lakukan penginstallan Dependencies
