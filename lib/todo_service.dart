@@ -29,8 +29,6 @@ class TodoService {
     }
   }
 
-
-  /// Tambah todo baru
   Future<Todo> addTodo(String title) async {
     final res = await http.post(
       Uri.parse(baseTodos),

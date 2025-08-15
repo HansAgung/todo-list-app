@@ -69,7 +69,6 @@ class _TodoPageState extends State<TodoPage> {
         children: [
           if (prov.loading) const LinearProgressIndicator(),
 
-          // Error banner
           if (prov.error != null)
             MaterialBanner(
               content: Text(prov.error!),
@@ -92,7 +91,6 @@ class _TodoPageState extends State<TodoPage> {
               ],
             ),
 
-          // Notifikasi offline / warn
           if (prov.notificationMessage != null)
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -102,7 +100,6 @@ class _TodoPageState extends State<TodoPage> {
               ),
             ),
 
-          // FutureBuilder + ListView
           Expanded(
             child: FutureBuilder<List>(
               future: context.read<TodoProvider>().initAndFetch(),
@@ -172,9 +169,8 @@ class _TodoPageState extends State<TodoPage> {
     context.read<TodoProvider>().add(text);
     _addController.clear();
 
-    // Tampilkan notifikasi sukses
     final prov = context.read<TodoProvider>();
-    prov.notificationMessage = null; // clear offline warning
+    prov.notificationMessage = null; 
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
         content: Text('Tugas berhasil ditambahkan'),

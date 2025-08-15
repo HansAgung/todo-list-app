@@ -20,7 +20,6 @@ class TodoProvider extends ChangeNotifier {
 
   static const _cacheKey = 'cached_todos_v1';
 
-  /// Inisialisasi + fetch awal
   Future<List<Todo>> initAndFetch() {
     initialFuture ??= _init();
     return initialFuture!;
@@ -30,11 +29,10 @@ class TodoProvider extends ChangeNotifier {
     await _loadCache();
     notifyListeners();
 
-    await fetchFromApi(); // ❌ tidak perlu context lagi
+    await fetchFromApi(); 
     return todos;
   }
 
-  /// Fetch dari API
   Future<void> fetchFromApi() async {
     loading = true;
     error = null;
@@ -48,7 +46,6 @@ class TodoProvider extends ChangeNotifier {
         ..addAll(data);
       await _saveCache();
     } on SocketException {
-      // Jika offline, simpan pesan untuk ditampilkan di UI
       notificationMessage = "Kamu sedang offline";
     } catch (e) {
       error = e.toString();
@@ -58,7 +55,6 @@ class TodoProvider extends ChangeNotifier {
     }
   }
 
-  /// Tambah todo baru
   Future<void> add(String title) async {
     if (title.trim().isEmpty) return;
     loading = true;
@@ -75,7 +71,6 @@ class TodoProvider extends ChangeNotifier {
     }
   }
 
-  /// Toggle completed
   Future<void> toggle(Todo todo, bool value) async {
     final idx = _todos.indexWhere((t) => t.id == todo.id);
     if (idx == -1) return;
@@ -94,7 +89,6 @@ class TodoProvider extends ChangeNotifier {
     }
   }
 
-  /// Hapus todo
   Future<void> remove(Todo todo) async {
     final idx = _todos.indexWhere((t) => t.id == todo.id);
     if (idx == -1) return;
